@@ -1,0 +1,27 @@
+type GQExample {
+  id: String!
+  variable1: String!
+  variable2: Int!
+}
+
+type Query {
+  getByID(id: String!): GQExample
+  getAll: [GQExample]
+}
+
+input GQCreateExample {
+  variable1: String!
+  variable2: Int!
+} 
+
+input GQUpdateExample {
+  id: String!
+  variable1: String!
+  variable2: Int!
+}
+
+type Mutation {
+  createExample(input: GQCreateExample!): String
+  updateExample(input: GQUpdateExample!): GQExample
+  deleteExample(id: String!): String
+}
