@@ -89,3 +89,7 @@ To generate new files from the specified "schema.graphqls" in the "graph" folder
 1. Press F1
 2. Select Run task
 3. Select and run "Generate Graphql"
+
+## Author/Maintainer ##
+Rickard Andersson
+https://github.com/RickardA/go-graphql-template
