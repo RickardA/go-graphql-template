@@ -3,19 +3,20 @@ package app
 import (
 	"context"
 
+	"github.com/RickardA/go-graphql-template/graph/model"
 	"github.com/RickardA/go-graphql-template/internal/pkg/domain"
 )
 
 func NewClient(repo Repository) Client {
 	return Client{
 		repository: repo,
-		//Subs:       make(map[string]chan *model.GQConflict),
+		Subs:       make(map[string]chan *model.GQExample),
 	}
 }
 
 type Client struct {
 	repository Repository
-	//Subs       map[string]chan *model.GQConflict
+	Subs       map[string]chan *model.GQExample
 }
 
 type Repository interface {
